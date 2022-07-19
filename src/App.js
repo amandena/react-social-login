@@ -1,12 +1,14 @@
 import './App.css'
 import Navbar from './components/Navbar'
-import Post from './pages/Post'
+import Login from './pages/Login'
+// import Post from './pages/Post'
+// import Home from './pages/Home'
 
 function App() {
   return (
     <div className='App'>
       <Navbar />
-      <Post />
+      <Login />
     </div>
   )
 }
