@@ -4,7 +4,15 @@ import Github from '../images/github.png'
 
 const Login = () => {
   const google = () => {
-    window.open("http://localhost:5001/auth/google/callback")
+    window.open("http://localhost:5001/auth/google/callback", "_self")
+  }
+
+  const github = () => {
+    window.open("http://localhost:5001/auth/github/callback", "_self")
+  }
+
+  const facebook = () => {
+    window.open("http://localhost:5001/auth/facebook/callback", "_self")
   }
 
   return (
@@ -16,11 +24,11 @@ const Login = () => {
             <img src={Google} alt="Google" className="icon" />
             Google  
           </div>  
-          <div className="loginButton facebook">
+          <div className="loginButton facebook" onClick={facebook}>
             <img src={Facebook} alt="Facebook" className="icon" />  
             Facebook
           </div>
-          <div className="loginButton github">
+          <div className="loginButton github" onClick={github}>
             <img src={Github} alt="GitHub" className="icon" />  
             GitHub
           </div>
