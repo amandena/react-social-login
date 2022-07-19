@@ -5,17 +5,13 @@ const Navbar = ({ user }) => {
     window.open("http://localhost:5001/auth/logout", "_self")
   }
 
-  if (!user) {
-    return <div>Loading...</div>
-  }
-
   return (
     <div className="navbar">
       <span className="logo"><Link className="link" to="/">Social App</Link></span>
       {user ? (
         <ul className="list">
           <li className="listItem">
-            <img src={user.photos[0].value} alt="" className="avatar" />
+            <img src={user && user.photos[0].value} alt="" className="avatar" />
           </li>
           <li className="listItem">{user.displayName}</li>
           <li className="listItem" onClick={logout}>Logout</li>
