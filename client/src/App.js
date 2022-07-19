@@ -7,7 +7,7 @@ import Post from './pages/Post'
 import Home from './pages/Home'
 
 function App() {
-  const user = true
+  const user = false
 
   return (
     <BrowserRouter>

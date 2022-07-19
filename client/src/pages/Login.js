@@ -1,23 +1,27 @@
-import google from '../images/google.png'
-import facebook from '../images/facebook.png'
-import github from '../images/github.png'
+import Google from '../images/google.png'
+import Facebook from '../images/facebook.png'
+import Github from '../images/github.png'
 
 const Login = () => {
+  const google = () => {
+    window.open("http://localhost:5001/auth/google/callback")
+  }
+
   return (
     <div className="login">
       <h1 className="loginTitle">Choose a Login Method</h1>
       <div className="wrapper">
         <div className="left">
-          <div className="loginButton google">
-            <img src={google} alt="Google" className="icon" />
+          <div className="loginButton google" onClick={google}>
+            <img src={Google} alt="Google" className="icon" />
             Google  
           </div>  
           <div className="loginButton facebook">
-            <img src={facebook} alt="Facebook" className="icon" />  
+            <img src={Facebook} alt="Facebook" className="icon" />  
             Facebook
           </div>
           <div className="loginButton github">
-            <img src={github} alt="GitHub" className="icon" />  
+            <img src={Github} alt="GitHub" className="icon" />  
             GitHub
           </div>
         </div>
